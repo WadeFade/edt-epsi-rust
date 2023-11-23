@@ -1,0 +1,25 @@
+meta {
+  name: POST TEST
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/echo
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "data": "test"
+  }
+}
+
+body:form-urlencoded {
+  test: yooo
+}
+
+body:multipart-form {
+  data: test
+}
